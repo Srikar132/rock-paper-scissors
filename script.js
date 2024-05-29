@@ -29,6 +29,13 @@ const CHOICES  = [
     }
 ];
 
+const winSound = new Audio("./audios/mixkit-achievement-bell-600.mp3");
+const clickSound = new Audio("./audios/mixkit-arcade-game-jump-coin-216.mp3");
+const loseSound = new Audio("./audios/mixkit-arcade-retro-game-over-213.mp3");
+const drawSound = new Audio("./audios/mixkit-losing-drums-2023.mp3");
+const click = new Audio('./audios/mixkit-cool-interface-click-tone-2568.mp3');
+
+
 const choiceBtns = document.querySelectorAll('.choice-btn');
 const gameDiv = document.querySelector('.game');
 const resultDiv = document.querySelector('.result');
@@ -43,7 +50,7 @@ let score = 0 ;
 
 choiceBtns.forEach( (button) => {
     button.addEventListener('click', () => {
-        clickSound();
+        clickSound.play();
         setTimeout(() => {
             let choiceName = button.dataset.choice;
             let choice = CHOICES.find( choice => choice.name === choiceName);
@@ -53,10 +60,7 @@ choiceBtns.forEach( (button) => {
     });
 });
 
-function clickSound() {
-    let audio = new Audio("./audios/mixkit-arcade-game-jump-coin-216.mp3");
-    audio.play();
-}
+
 
 
 
@@ -98,15 +102,16 @@ function displayWinner(results){
             resultText.textContent = 'You Wins';
             resultDivs[0].classList.toggle('winner');
             collectPoints(1);
-            winSound();
+            winSound.play();
         }else if(aiWins) {
             resultText.textContent = 'You Lose';
             resultDivs[1].classList.toggle('winner');
+            loseSound.play();
             collectPoints(-1);
-            loseSound();
+            
         }else {
             resultText.textContent = 'Draw';
-            drawSound();
+            drawSound.play();
         }
 
         showWinner.classList.toggle('hidden');
@@ -115,20 +120,7 @@ function displayWinner(results){
     },1500);
 }
 
-function drawSound() {
-    let audio = new Audio("./audios/mixkit-arcade-retro-game-over-213.mp3");
-    audio.play();
-}
 
-function winSound() {
-    let audio = new Audio("./audios/mixkit-achievement-bell-600.mp3");
-    audio.play();
-}
-
-function loseSound() {
-    let audio = new Audio("./audios/mixkit-losing-drums-2023.mp3");
-    audio.play();
-}
 
 function isWinner(results) {
     return results[0].beats === results[1].name;
@@ -140,7 +132,7 @@ function collectPoints(point) {
 }
 
 playAgainBtn.addEventListener('click',() => {
-    click2();
+    click.play();
     resultDiv.classList.toggle('winner-toggle');
     resultDiv.classList.toggle('hidden');
     gameDiv.classList.toggle('hidden');
@@ -157,10 +149,7 @@ playAgainBtn.addEventListener('click',() => {
 
 });
 
-function click2() {
-    let audio = new Audio('./audios/mixkit-cool-interface-click-tone-2568.mp3');
-    audio.play();
-;}
+
 
 
 const startGame = document.querySelector('.start-button') ;
