@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no , maximun-scale=1.0 , minimum-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="score">
+          <div class="score_title">score</div>
+          <div class="score_number">0</div>
+        </div>
+      </header>
+
+      <div class="game">
+        <button class="choice-btn" data-choice="paper">
+          <div class="choice paper">
+            <img src="./images/icon-paper.svg" alt="paper">
+          </div>
+        </button>
+        <button class="choice-btn" data-choice="scissors">
+          <div class="choice scissors">
+            <img src="./images/icon-scissors.svg" alt="scissors">
+          </div>
+        </button>
+        <button class="choice-btn" data-choice="rock">
+          <div class="choice  rock">
+            <img src="./images/icon-rock.svg" alt="rock">
+          </div>
+        </button>
+      </div>
+
+    </div>
+
+    <section class="result hidden">
+      <h1 class="result_heading">you picked</h1>
+      <h1 class="result_heading">the AI picked</h1>
+      <div class="result-result"></div>
+      <div class="show-winner hidden">
+        <h1 class="result-text">you lose</h1>
+        <button class="play-again">play again</button>
+      </div>
+      <div class="result-result"></div>
+    </section>
+
+
+  
+
+    </div>
+        <button class="rules-btn" tabindex="1">rules</button>
+    <div>
+  
+    <div class="rule-main">
+      <div class="rule-container">
+        <header class="rule-header">
+          <h1 class="rule-heading">rules</h1>
+          <button class="rule-closer"><img src="./images/icon-close.svg"  alt="x"></button>
+        </header>
+        <div class="rule-img">
+          <img src="./images/image-rules.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <section class="intro">
+      <div class="intro-card">
+        <h1>Rock Paper Scissors</h1>
+        <p>Welcome to Rock Paper Scissors!</p>
+        <p><strong>How to Play:</strong></p>
+        <p>1. Rock crushes Scissors.</p>
+        <p>2. Paper covers Rock.</p>
+        <p>3. Scissors cut Paper.</p>
+        <p><strong>Choose your move to start:</strong></p>
+        <div class="move"><img src="./images/icon-rock.svg" alt="rock"></div>
+        <div class="move"><img src="./images/icon-paper.svg" alt="paper"></div>
+        <div class="move"><img src="./images/icon-scissors.svg" alt=""></div>
+        <button class="start-button">Start Game</button>
+    </div>
+    </section>
+
+  <div class="attribution">
+    Challenge by <a href="" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">AppletCode</a>.
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
