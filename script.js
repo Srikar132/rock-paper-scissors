@@ -5,12 +5,12 @@ const ruleCloser = document.querySelector('.rule-closer');
 
 ruleBtn.addEventListener("click", () => {
     rulesDisplay.classList.toggle('show-rules');
-    click2();
+    click.play();
 });
 
 ruleCloser.addEventListener("click", () => {
     rulesDisplay.classList.toggle('show-rules');
-    click2();
+    click.play();
 });
 
 
