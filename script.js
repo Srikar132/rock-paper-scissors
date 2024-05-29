@@ -2,6 +2,7 @@
 const ruleBtn = document.querySelector('.rules-btn');
 const rulesDisplay = document.querySelector('.rule-main');
 const ruleCloser = document.querySelector('.rule-closer');
+const click = new Audio('./audios/mixkit-cool-interface-click-tone-2568.mp3');
 
 ruleBtn.addEventListener("click", () => {
     rulesDisplay.classList.toggle('show-rules');
@@ -33,7 +34,6 @@ const winSound = new Audio("./audios/mixkit-achievement-bell-600.mp3");
 const clickSound = new Audio("./audios/mixkit-arcade-game-jump-coin-216.mp3");
 const loseSound = new Audio("./audios/mixkit-arcade-retro-game-over-213.mp3");
 const drawSound = new Audio("./audios/mixkit-losing-drums-2023.mp3");
-const click = new Audio('./audios/mixkit-cool-interface-click-tone-2568.mp3');
 
 
 const choiceBtns = document.querySelectorAll('.choice-btn');
